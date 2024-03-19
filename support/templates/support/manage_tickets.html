@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Tickets</title>
+</head>
+<body>
+    <h1>Manage Tickets</h1>
+    <!-- Add content specific to manage_tickets view here -->
+    <p>List of Tickets:</p>
+    <ul>
+        {% for ticket in tickets %}
+            <li>{{ ticket.title }} - Status: {{ ticket.status }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'customers/base.html' %}
+
+{% block content %}
+  <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+    <h2 style="font-size: 24px; color: #333;">Track Your Service Requests</h2>
+    <ul style="list-style: none; padding: 0;">
+      {% for request in service_requests %}
+        <li style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+          <strong style="font-size: 18px; color: hsl(40, 100%, 50%);">Request ID:</strong> {{ request.id }}<br>
+          <strong style="font-size: 16px; color: hsl(0, 51%, 51%);">Status:</strong> {{ request.status }}<br>
+          <strong style="font-size: 16px; color: hsl(233, 71%, 47%);">Subject:</strong> {{ request.subject }}<br>
+          <strong style="font-size: 16px; color: hsl(298, 80%, 32%);">Request Date:</strong> {{ request.request_date }}<br>
+          <strong style="font-size: 16px; color: #3ab836;">Details:</strong> {{ request.details|linebreaks }}<br>
+          <!-- You can display more information here -->
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

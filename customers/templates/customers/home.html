@@ -1,0 +1,21 @@
+{% extends 'customers/base.html' %}
+
+{% block header %}
+<header style="background-color: #9b0b0b; color: white; padding: 10px 0; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <h1>Gas Utility Company</h1>
+</header>
+{% endblock %}
+
+{% block content %}
+<section style="background-color: #f8f8f8; padding: 20px; text-align: center; ">
+    <h2 style="color: hsl(0, 76%, 39%); font-size: 28px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Welcome to Gas Utilities</h2>
+    <p style="color: #b51717; font-size: 18px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Explore our services and manage your account online.</p>
+    <a href="{% url 'customers:submit_request' %}" style="background-color: #3b8b2b; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Submit Request</a>
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer style="background-color: hsl(0, 50%, 24%); color: white; padding: 10px 0; text-align: center;">
+    <p>&copy; 2023 Gas Utility Company. All rights reserved.</p>
+</footer>
+{% endblock %}

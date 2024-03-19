@@ -1,0 +1,12 @@
+{% extends 'customers/base.html' %}
+
+{% block content %}
+  <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h2 style="font-size: 24px; color: #333;">Your Account Information</h2>
+    <p style="font-size: 16px; color: #666;">Name: {{ customer.name }}</p>
+    <p style="font-size: 16px; color: #666;">Email: {{ customer.email }}</p>
+    <p style="font-size: 16px; color: #666;">Phone: {{ customer.phone }}</p>
+    <p style="font-size: 16px; color: #666;">Account Number: {{ customer.account_number }}</p>
+    <!-- Display other customer information here -->
+  </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Gas Utilities</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <header style="background-color: hsl(0, 74%, 62%); color: #fff; padding: 10px;">
+        <h1 style="margin: 0; padding: 0;">Your Gas Utilities</h1>
+        <nav>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="display: inline; margin-right: 10px;"><a href="{% url 'customers:home' %}" style="color: #fff; text-decoration: none;">Home</a></li>
+                <li style="display: inline; margin-right: 10px;"><a href="{% url 'customers:submit_request' %}" style="color: #fff; text-decoration: none;">Submit Request</a></li>
+                <li style="display: inline; margin-right: 10px;"><a href="{% url 'customers:track_requests' %}" style="color: #fff; text-decoration: none;">Track Requests</a></li>
+                <li style="display: inline; margin-right: 10px;"><a href="{% url 'customers:account_info' %}" style="color: #fff; text-decoration: none;">Account Info</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 20px;">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer style="background-color: #333; color: #fff; padding: 10px; text-align: center;">
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>
